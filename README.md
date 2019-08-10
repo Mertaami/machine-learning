@@ -1,14 +1,16 @@
 # List of algorithms
 
-* MultiLayerPerceptron
+* [x] Linear Regression
+* Logistic Regression
+* Descision Tree
+* [x] MultiLayer Perceptron
 * Auto-encoder
-* LinearRegression
 
 ## Linear Regression
 `linear_regression.py`
 
 ```
-class LinearRegression(input_dimension: int, learning_rate: float):
+class LinearRegression(input_dimension: int):
     compute(
         input: ndarray[input_dimension]
     ) -> output: float

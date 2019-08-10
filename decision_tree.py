@@ -1,18 +1,12 @@
 import numpy as np
-import matplotlib.pyplot as plt
 
-class LinearRegression:
+class DecisionTree():
     def __init__(self, input_dimension: int):
-        self.coef = np.zeros(input_dimension + 1)
-
-    def compute(self, input):
-        result = self.coef @ np.insert(input, 0, 1)
-        return result
-
-    def learn(self, input_vec: np.ndarray, expected_vec: np.ndarray):
-        input_vec = np.c_[np.ones(len(input_vec)), input_vec]
-        self.coef = np.linalg.inv( input_vec.transpose() @ input_vec ) @ input_vec.transpose() @ expected_vec
-
+        pass
+    
+    def learn(self, input_vec: np.ndarray, expected_vec: np/ndarray):
+        
+    
 
 
 if __name__ == "__main__":
@@ -62,11 +56,10 @@ if __name__ == "__main__":
         15,
         15
     ])
-    errors = []
-    assert len(expected_vec) == len(input_vec)
+    assert len(input_vec) == len(expected_vec)
     print(f"Input shape: {input_vec[0].shape}")
-    print(f"Initializating LinearRegression model...            ", end="")
-    lin = LinearRegression(3)
+    print(f"Initializating DecisionTree model...            ", end="")
+    lin = DecisionTree(3)
     print("OK")
     print(f"Testing compute...                                  ", end="")
     result = lin.compute(input_vec[0])
@@ -79,3 +72,4 @@ if __name__ == "__main__":
     result = lin.compute(input_vec[0])
     print("OK")
     print(f"    {input_vec[0]} -> {result} ({expected_vec[0]})")
+
